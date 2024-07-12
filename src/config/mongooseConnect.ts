@@ -1,8 +1,10 @@
 // src/database.ts
 
 import mongoose from 'mongoose';
+import dotenv from "dotenv"
 
-const uri = 'mongodb+srv://selasisepenu5:aeonterry@cluster0.e6fwewn.mongodb.net/url-shortener?retryWrites=true&w=majority&appName=Cluster0/';
+dotenv.config();
+const uri = process.env.MONGODB_URI! as string;
 
 
 const connectDB = async () => {
